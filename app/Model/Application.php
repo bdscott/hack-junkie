@@ -31,30 +31,11 @@ App::uses('AppModel', 'Model');
  */
 class Application extends AppModel {
 	public $name = "Application";
-	public $validate = array(
-        'first_name' => array(
-            'alphaNumeric' => array(
-                'rule'     => 'alphaNumeric',
-                'required' => true,
-                'message'  => 'Alphabets and numbers only'
-            ),
-            'between' => array(
-                'rule'    => array('between', 5, 20),
-                'message' => 'Between 5 to 20 characters'
-            )
-        ),
-        
-		'last_name' => array(
-            'alphaNumeric' => array(
-                'rule'     => 'alphaNumeric',
-                'required' => true,
-                'message'  => 'Alphabets and numbers only'
-            ),
-            'between' => array(
-                'rule'    => array('between', 5, 20),
-                'message' => 'Between 5 to 20 characters'
-            )
-        ),
+	/*public $validate = array(
+		'first_name' => array(
+			'required' => true
+	        ),
+		 ),
         
 		'school' => array(
             'alphaNumeric' => array(
@@ -90,6 +71,6 @@ class Application extends AppModel {
         'rule'    => array('boolean'),
         'message' => 'Incorrect value for myCheckbox'
     )
-    );
+    );*/
 		
 }

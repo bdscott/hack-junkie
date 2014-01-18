@@ -23,9 +23,8 @@ class HackersController extends AppController {
 			$hackerDetails = $this-> Hacker-> findByEmail($email);
 			
 			if($hackerDetails["Hacker"]["password"] == sha1($password)){
-				session_start();
-				$_SESSION['hackerid'] = $hackerDetails["Hacker"]["id"];
-				$_SESSION['hackerUsername'] = $email;
+				$this->Session->write('hackerid', $hackerDetails["Hacker"]["id"]);
+				$this->Session->write('hackerUsername', $email);
 				$this->redirect(array('controller' => 'applications', 'action' => 'index'));
 			}
 		}
@@ -37,9 +36,6 @@ class HackersController extends AppController {
 	}
 	
 	function index(){
-		if(!isset($_SESSION['hackerid'])){
-		$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
-		}
 		
 	}
 

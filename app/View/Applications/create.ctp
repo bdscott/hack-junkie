@@ -5,8 +5,13 @@
 		<h2>Apply for MHacks III</h2>
 		<p class="instruction"><strong>MHacks III</strong> is using hackjunkie to handle registration and travel reimbursements. If you've used hackjunkie before, <?php echo $this->Html->link('sign in now.', array('controller' => 'hackers', 'action' => 'login')) ?></p>
     </header>
-	<!--<form method="post" class="unit span-grid">-->
-		<?php echo $this->Form->create('Application');?>
+		<!--<ul class="errors" style="list-style: none; color: red;">
+		<?php 	/*foreach($errors as $error){
+					echo '<li>' . $error[0] . '</li>';
+				} */		
+		?>
+		</ul>-->
+		<?php echo $this->Form->create('Application', array('class' => 'unit span-grid'));?>
 		<fieldset step-number="1" class="unit one-of-two">
 			<h3>Who are you?</h3>
 			<span class="unit span-grid">

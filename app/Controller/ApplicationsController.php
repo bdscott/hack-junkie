@@ -4,6 +4,12 @@ App::uses('AppController', 'Controller');
 
 class ApplicationsController extends AppController {
 	function index() {
+		if($this->Session->read('hackerid') == null){
+			$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
+		} else {
+			$applications = $this->Application->findAllByEmail($this->Session->read('hackerUsername'));
+			$this->set('applications', $applications);
+		}
 	}
 
 	function create() {
@@ -18,12 +24,9 @@ class ApplicationsController extends AppController {
 			} else {
 				// didn't validate logic
 				$this->set('errors', $this->Application->validationErrors);
+				$this->Session->setFlash('Hallo');
 			}
 		}
-		/**
-		 if {
-
-		 }**/
 	}
 
 	function thanks() {

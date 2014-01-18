@@ -37,7 +37,7 @@ class HackersController extends AppController {
 	
 	function index(){
 		if(!isset($_SESSION['hackerid'])){
-			throw new ForbiddenException('You must be logged in!');
+		$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
 		}
 		
 	}

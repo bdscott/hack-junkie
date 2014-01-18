@@ -7,9 +7,6 @@
 
 		<fieldset step-number="1" class="unit one-of-two">
 			
-		<fieldset step-number="3" class="unit one-of-two">
-			<h3>Welcome <?php echo $_SESSION['hackerUsername'];?></h3>
-		</fieldset>
 		<br>
 		<?php echo $this->Html->link("Logout" ,array("controller" => "hackers", "action" => "logout"));?>
 

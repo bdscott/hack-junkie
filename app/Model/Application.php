@@ -31,6 +31,7 @@ App::uses('AppModel', 'Model');
  */
 class Application extends AppModel {
 	public $name = "Application";
+	public $belongsTo = 'Competition';
 	/*public $validate = array(
 		'first_name' => array(
 			'required' => true

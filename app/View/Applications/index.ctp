@@ -6,12 +6,19 @@
 		<div class="unit span-grid">
 			<h3>Your applications</h3>
 			<table width="100%">
-				<?php foreach($applications as $application){ ?>
+				<?php foreach($applications as $application){
+					
+					$start_date = new DateTime($application['Competition']['event_start']);
+					$start_date = $start_date->format('M. d');
+					$end_date = new DateTime($application['Competition']['event_end']);
+					$end_date = $end_date->format('M. d');
+					
+					 ?>
 				<tr>
-					<td>MHacks III</td>
-					<td>Jan. 17-19</td>
-					<td>Detroit, MI</td>
-					<td class="application-status">In review</td>
+					<td><?php echo $application['Competition']['name']; ?></td>
+					<td><?php echo $start_date . ' - ' . $end_date; ?></td>
+					<td><?php echo $application['Competition']['city'] . ', ' . $application['Competition']['state']; ?></td>
+					<td class="application-status"><?php echo $application['Application']['status']; ?></td>
 				</tr>
 				<?php } ?>
 			</table>

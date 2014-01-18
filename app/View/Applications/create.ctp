@@ -3,7 +3,7 @@
     <header class="unit span-grid">
 		<img src="<?php echo $this->webroot; ?>images/uploads/event-logos/1.png" width="200" class="event-logo">
 		<h2>Apply for MHacks III</h2>
-		<p class="instruction"><strong>MHacks III</strong> is using hackjunkie to handle registration and travel reimbursements. If you've used hackjunkie before, <a href="/login.html">sign in now.</a></p>
+		<p class="instruction"><strong>MHacks III</strong> is using hackjunkie to handle registration and travel reimbursements. If you've used hackjunkie before, <?php echo $this->Html->link('sign in now.', array('controller' => 'hackers', 'action' => 'login')) ?></p>
     </header>
 	<form method="post" class="unit span-grid">
 		<fieldset step-number="1" class="unit one-of-two">

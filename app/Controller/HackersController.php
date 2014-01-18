@@ -31,7 +31,7 @@ class HackersController extends AppController {
 	
 	function logout(){
 		$this->Session->destroy();
-		echo "You're logged out";
+		$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
 	}
 	
 	function index(){

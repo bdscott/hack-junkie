@@ -16,15 +16,12 @@ class HackersController extends AppController {
 	}
 
 	function login() {
-		if (isset($this->data["username"]) && isset($this->data["Password"])) {
-			$email = $this-> data["username"];
-			$password = $this-> data["Password"];
+		if (isset($this->data["email"]) && isset($this->data["password"])) {
+			$email = $this-> data["email"];
+			$password = $this-> data["password"];
 			$hackerDetails = $this-> Hacker-> findByEmail($email);
-			?><pre><?php print_r($hackerDetails); ?> </pre> <?php
 			
 			if($hackerDetails["Hacker"]["password"] == sha1($password)){
-				echo "you are success!";
-				echo "<br> so excite!";
 				session_start();
 				$_SESSION['hackerid'] = $hackerDetails["Hacker"]["id"];
 				$_SESSION['hackerUsername'] = $email;
@@ -35,7 +32,7 @@ class HackersController extends AppController {
 	
 	function logout(){
 		$this->Session->destroy();
-		echo "You're logged out";
+		$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
 	}
 	
 	function index(){

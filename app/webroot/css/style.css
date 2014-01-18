@@ -1,0 +1,25 @@
+body	{ background: #eeeeee; }
+.container { padding-top: 25px; }
+
+h2	{ color: #05a695; }
+a	{ color: #04b2a0; text-decoration: none; border-bottom: 1px dotted #04b2a0; padding-bottom: 3px; }
+a:hover	{ color: #05a695; }
+form input[type=text], form select	{ margin: 5px auto; width: 325px; padding: 5px; font-size: 20px; border-radius: 5px; border: 1px solid #dedede; }
+form input[type=submit], a.button	{ width: 100%; padding: 11px 0; display: block; background: #04b2a0; border: none; color: #ffffff; border-radius: 5px; font-size: 20px; }
+form input[type=submit]	{ padding: 15px 0; }
+form input[type=submit]:hover, a.button:hover	{ background: #05a695; }
+form label	{ display: block; text-align: left; color: #666666; }
+textarea:focus, input:focus{ outline: 0; }
+p.instruction	{ color: #414141; text-align: left; }
+fieldset	{ border: none; }
+
+#application.container	{ text-align: center; }
+#application.container header	{ border-bottom: 5px solid #dedede; }
+#application.container header p.instruction	{ margin-top: -12px; }
+#application.container .event-logo	{ display: block; margin: 0 auto; margin-bottom: 10px; }
+#application.container h3	{ color: #a1a1a1; text-transform: uppercase; font-size: 14px; margin: 18px 0 10px 0; }
+#application.container h3 span	{ color: #e283df; }
+#application.container form	{ margin-top: 8px; }
+#application.container form	input[type=submit], #application.container form a.button { margin-top: 18px; }
+
+

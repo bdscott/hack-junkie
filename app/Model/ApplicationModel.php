@@ -29,5 +29,5 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class ApplicationModel extends Model {
+class Application extends Model {
 }

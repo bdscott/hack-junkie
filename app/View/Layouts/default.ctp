@@ -6,6 +6,9 @@
 		
 		<link rel="stylesheet" href="<?php echo $this->webroot; ?>css/toast.css"/>
 		<link rel="stylesheet" href="<?php echo $this->webroot; ?>css/style.css"/>
+		
+		<script type="text/javascript" src="//use.typekit.net/vlt1zwt.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body>
 

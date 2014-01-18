@@ -4,7 +4,7 @@
 		<img src="<?php echo $this->webroot; ?>images/uploads/event-logos/1.png" width="200" class="event-logo">
     </header>
 	<form method="post" class="unit span-grid">
-			<h3>Sign in to MHacks III</h3>
+			<h3>Sign in with your hackJunkie account</h3>
 			<span class="unit span-grid">
 				<input type="text" name="email" placeholder="Email"/>
 			</span>

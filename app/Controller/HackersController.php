@@ -1,8 +1,9 @@
 <?php
 class HackersController extends AppController {
-
+	
+	
 	public $uses = array('Application', 'Hacker');
-
+	
 	function register($application_id) {
 		if ($this-> data) {
 			$application = $this-> Application-> findById($application_id);
@@ -24,6 +25,7 @@ class HackersController extends AppController {
 			if($hackerDetails["Hacker"]["password"] == sha1($password)){
 				session_start();
 				$_SESSION['hackerid'] = $hackerDetails["Hacker"]["id"];
+				$_SESSION['hackerUsername'] = $email;
 				$this->redirect(array('controller' => 'applications', 'action' => 'index'));
 			}
 		}
@@ -36,8 +38,9 @@ class HackersController extends AppController {
 	
 	function index(){
 		if(!isset($_SESSION['hackerid'])){
-			throw new ForbiddenException('You must be logged in!');
+		$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
 		}
+		
 	}
 
 }

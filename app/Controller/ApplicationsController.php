@@ -17,8 +17,11 @@ class ApplicationsController extends AppController {
 			$this -> Application -> set($this -> request -> data);
 			if ($this -> Application -> validates()) {
 				// it validated logic
-				$this->Application->save($this->data);
-				$application = $this -> Application -> find('first', array('conditions' => array('email' => $this -> data['email']), 'order' => array('id' => 'DESC')));
+				$newApplication = $this->data;
+				$newApplication['Application']['competition_id'] = 1;
+				$newApplication['Application']['status'] = 'In review';
+				$this->Application->save($newApplication);
+				$application = $this -> Application -> find('first', array('conditions' => array('email' => $this -> data['email']), 'order' => array('Application.id' => 'DESC')));
 				$this -> redirect(array('controller' => 'hackers', 'action' => 'register', $application['Application']['id']));
 				//print_r($this -> data);
 			} else {

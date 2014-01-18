@@ -122,7 +122,6 @@
 				<input type="text" name="zip" placeholder="Zip"/>
 			</span>-->
 		</fieldset>
-		<a href="#" class="button" id="next-step">Continue</a>
 		<input type="submit" value="Apply for MHacks III"/>
   	</form>
 

@@ -12,8 +12,7 @@
 				<input type="password" name="password" placeholder="Password"/>
 			</span>
 		
-		<a href="#" class="button" id="next-step">Continue</a>
-		<input type="submit" value="Sign in to MHacks III"/>
+			<input type="submit" value="Sign in to MHacks III"/>
   	</form>
 
   </div>

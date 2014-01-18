@@ -1,8 +1,9 @@
 <?php
 class HackersController extends AppController {
-
+	
+	
 	public $uses = array('Application', 'Hacker');
-
+	
 	function register($application_id) {
 		if ($this-> data) {
 			$application = $this-> Application-> findById($application_id);

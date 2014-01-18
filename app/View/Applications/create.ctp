@@ -5,12 +5,14 @@
 		<h2>Apply for MHacks III</h2>
 		<p class="instruction"><strong>MHacks III</strong> is using hackjunkie to handle registration and travel reimbursements. If you've used hackjunkie before, <?php echo $this->Html->link('sign in now.', array('controller' => 'hackers', 'action' => 'login')) ?></p>
     </header>
-	<form method="post" class="unit span-grid">
+	<!--<form method="post" class="unit span-grid">-->
+		<?php echo $this->Form->create('Application');?>
 		<fieldset step-number="1" class="unit one-of-two">
 			<h3>Who are you?</h3>
 			<span class="unit span-grid">
 		    	<input type="text" name="first_name" placeholder="First name"/>
 			</span>
+			
 			<span class="unit span-grid">
 		    	<input type="text" name="last_name" placeholder="Last name"/>
 			</span>
@@ -48,9 +50,9 @@
 		</fieldset>
 		<fieldset step-number="4" class="unit one-of-two">
 			<h3>Will you require travel reimbursement?</h3>
-			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="yes" />
+			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="true" />
 			Yes</span>
-			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="no" />
+			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="false" />
 			No</span> 
 			<!--<h3>Where should reimbursements be sent?</h3>
 			<span class="unit span-grid">

@@ -69,7 +69,7 @@
 			</span>
 		</fieldset>
 		<a href="#" class="button" id="next-step">Continue</a>
-		<input type="submit" value="Register for MHacks III"/>
+		<input type="submit" value="Apply for MHacks III"/>
   	</form>
 
   </div>

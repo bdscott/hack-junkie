@@ -18,7 +18,7 @@
 				<input type="text" name="school" placeholder="College or university name"/>
 			</span>
 			<span class="unit span-grid">
-				<select name="grad-year">
+				<select name="grad_year">
 					<option>Expected graduation</option>
 					<option value="2013">2013</option>
 					<option value="2014">2014</option>

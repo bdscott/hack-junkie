@@ -27,6 +27,7 @@ class HackersController extends AppController {
 				echo "<br> so excite!";
 				session_start();
 				$_SESSION['hackerid'] = $hackerDetails["Hacker"]["id"];
+				$_SESSION['hackerUsername'] = $email;
 				$this->redirect(array('controller' => 'applications', 'action' => 'index'));
 			}
 		}
@@ -41,6 +42,7 @@ class HackersController extends AppController {
 		if(!isset($_SESSION['hackerid'])){
 			throw new ForbiddenException('You must be logged in!');
 		}
+		
 	}
 
 }

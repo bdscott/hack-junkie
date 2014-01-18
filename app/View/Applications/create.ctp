@@ -47,7 +47,12 @@
 			</span>
 		</fieldset>
 		<fieldset step-number="4" class="unit one-of-two">
-			<h3>Where should reimbursements be sent?</h3>
+			<h3>Will you require travel reimbursement?</h3>
+			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed"/>
+			Yes</span>
+			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed"/>
+			No</span> 
+			<!--<h3>Where should reimbursements be sent?</h3>
 			<span class="unit span-grid">
 				<input type="text" name="address1" placeholder="Address"/>
 			</span>
@@ -66,7 +71,7 @@
 			</span>
 			<span class="unit span-grid">
 				<input type="text" name="zip" placeholder="Zip"/>
-			</span>
+			</span>-->
 		</fieldset>
 		<a href="#" class="button" id="next-step">Continue</a>
 		<input type="submit" value="Apply for MHacks III"/>

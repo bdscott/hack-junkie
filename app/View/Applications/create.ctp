@@ -48,9 +48,9 @@
 		</fieldset>
 		<fieldset step-number="4" class="unit one-of-two">
 			<h3>Will you require travel reimbursement?</h3>
-			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed"/>
+			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="yes" />
 			Yes</span>
-			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed"/>
+			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="no" />
 			No</span> 
 			<!--<h3>Where should reimbursements be sent?</h3>
 			<span class="unit span-grid">

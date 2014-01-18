@@ -16,12 +16,30 @@ class HackersController extends AppController {
 	}
 
 	function login() {
-		if (isset($this-> data["email"]) && isset($this-> data["password"])) {
-			echo "set!";
-			$email = $this-> data["email"];
-			$password = $this-> data["password"];
+		if (isset($this->data["username"]) && isset($this->data["Password"])) {
+			$email = $this-> data["username"];
+			$password = $this-> data["Password"];
 			$hackerDetails = $this-> Hacker-> findByEmail($email);
-			print_r($hackerDetails);
+			?><pre><?php print_r($hackerDetails); ?> </pre> <?php
+			
+			if($hackerDetails["Hacker"]["password"] == sha1($password)){
+				echo "you are success!";
+				echo "<br> so excite!";
+				session_start();
+				$_SESSION['hackerid'] = $hackerDetails["Hacker"]["id"];
+				$this->redirect(array('controller' => 'applications', 'action' => 'index'));
+			}
+		}
+	}
+	
+	function logout(){
+		$this->Session->destroy();
+		echo "You're logged out";
+	}
+	
+	function index(){
+		if(!isset($_SESSION['hackerid'])){
+			throw new ForbiddenException('You must be logged in!');
 		}
 	}
 

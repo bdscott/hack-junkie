@@ -32,7 +32,14 @@ class ApplicationsController extends AppController {
 				$this->set('errors', $this->Application->validationErrors);
 			}
 		} else {
-			$this->set('competition', $this->Competition->findById($competition_id));
+			$competition = $this->Competition->findById($competition_id);
+			if($competition['Competition']['scheme'] == 'application'){
+				$scheme_verbiage = 'Apply';
+			} else {
+				$scheme_verbiage = 'Register';
+			}
+			
+			$this->set(array('competition' => $competition, 'scheme_verbiage' => $scheme_verbiage));
 		}
 	}
 

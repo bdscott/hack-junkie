@@ -5,7 +5,7 @@
     </header>
 		<div class="unit span-grid">
 			<?php if($is_organizer){ ?>
-			<h3>5 Applications submitted</h3>
+			<h3>5 Applications submitted <a href="#">Export as csv</a></h3>
 			<?php } else { ?>
 			<h3>Your applications</h3>
 			<?php }?>

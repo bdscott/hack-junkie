@@ -30,4 +30,5 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class Hacker extends Model {
+	public $hasMany = 'Competition';
 }

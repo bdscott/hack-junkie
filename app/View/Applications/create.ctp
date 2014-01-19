@@ -53,13 +53,13 @@
 				<input type="text" name="linkedin_url" placeholder="LinkedIn URL"/>
 			</span>
 		</fieldset>
-		<fieldset step-number="4" class="unit one-of-two">
+		<!--<fieldset step-number="4" class="unit one-of-two">
 			<h3>Will you require travel reimbursement?</h3>
 			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="true" />
 			Yes</span>
 			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="false" />
 			No</span> 
-			<!--<h3>Where should reimbursements be sent?</h3>
+			<h3>Where should reimbursements be sent?</h3>
 			<span class="unit span-grid">
 				<input type="text" name="address1" placeholder="Address"/>
 			</span>

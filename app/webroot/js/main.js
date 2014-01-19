@@ -1,5 +1,8 @@
 $(function(){
 	
+	$('.datepicker').datepicker();
+
+	
 	/*var registrationStep = 1;
 	var numberOfSteps = $('div.container#application fieldset').length;
 	if(numberOfSteps == 1){

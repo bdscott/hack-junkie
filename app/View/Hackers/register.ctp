@@ -6,8 +6,8 @@
 		<p class="instruction">Setting a password allows you to return to this application at a later time and easily apply to other hackjunkie events.</p>
     </header>
 	<form method="post" class="unit span-grid">
-		<input type="password" name="password" placeholder="Password"/>
-		<input type="password" name="password" placeholder="Password (again)"/>
+		<input type="password" name="password" value="password" placeholder="Password"/>
+		<input type="password" name="password" value="password" placeholder="Password (again)"/>
 		<input type="submit" value="Save password"/>
   	</form>
 

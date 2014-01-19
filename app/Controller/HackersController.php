@@ -1,7 +1,7 @@
 <?php
 class HackersController extends AppController {
 	
-	
+		
 	public $uses = array('Application', 'Hacker');
 	
 	function register($application_id) {

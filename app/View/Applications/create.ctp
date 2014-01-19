@@ -2,8 +2,8 @@
   <div class="grid">
     <header class="unit span-grid">
 		<img src="<?php echo $this->webroot; ?>images/uploads/event-logos/1.png" width="200" class="event-logo">
-		<h2>Apply for MHacks III</h2>
-		<p class="instruction"><strong>MHacks III</strong> is using hackjunkie to handle registration and travel reimbursements. If you've used hackjunkie before, <?php echo $this->Html->link('sign in now.', array('controller' => 'hackers', 'action' => 'login')) ?></p>
+		<h2>Apply for <?php echo $competition['Competition']['name']; ?></h2>
+		<p class="instruction"><strong><?php echo $competition['Competition']['name']?></strong> is using hackjunkie to handle registration. If you've used hackjunkie before, <?php echo $this->Html->link('sign in now.', array('controller' => 'hackers', 'action' => 'login')) ?></p>
     </header>
 		<!--<ul class="errors" style="list-style: none; color: red;">
 		<?php 	/*foreach($errors as $error){
@@ -155,7 +155,7 @@
 				?>
 		</div>
 		<?php } ?>
-		<input type="submit" value="Apply for MHacks III"/>
+		<input type="submit" value="Apply for <?php echo $competition['Competition']['name']; ?>"/>
   	</form>
 
   </div>

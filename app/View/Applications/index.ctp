@@ -47,7 +47,7 @@
 		<?php //echo $this->Html->link("Logout", array("controller" => "hackers", "action" => "logout"));?>
 		
 		<footer class="unit span-grid">
-			<?php echo $this->Html->link('Sign out', array('controller' => 'hackers', 'actions' => 'logout')); ?>
+			<?php echo $this->Html->link('Sign out', array('controller' => 'hackers', 'action' => 'logout')); ?>
 		</footer>
   </div>
 </div>

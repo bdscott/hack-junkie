@@ -29,6 +29,6 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class Competition extends Model {
-	public $hasMany = 'Item';
+class Item extends Model {
+	public $belongsTo = 'Competition';
 }

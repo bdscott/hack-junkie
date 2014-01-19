@@ -2,7 +2,7 @@
 	<div class="grid">
 		<header class="unit span-grid">
 
-			<?php echo $this -> Form -> create("Competitions", array('action' => "upload", 'type' =>  'file')); ?>
+			<?php echo $this -> Form -> create("Competitions", array('action' => "upload", 'type' =>  'file', "class" => "unit span-grid")); ?>
   <fieldset>
 
   <?php

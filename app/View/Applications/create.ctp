@@ -15,20 +15,20 @@
 		<fieldset step-number="1" class="unit one-of-two">
 			<h3>Who are you?</h3>
 			<span class="unit span-grid">
-		    	<input type="text" name="first_name" placeholder="First name"/>
+		    	<input type="text" name="first_name" value="Patrick" placeholder="First name"/>
 			</span>
 			
 			<span class="unit span-grid">
-		    	<input type="text" name="last_name" placeholder="Last name"/>
+		    	<input type="text" name="last_name" value="Stuart" placeholder="Last name"/>
 			</span>
 			<span class="unit span-grid">
-				<input type="text" name="school" placeholder="College or university name"/>				
+				<input type="text" name="school" value="Starfleet Academy" placeholder="College or university name"/>				
 			</span>
 			<span class="unit span-grid">
 				<select name="grad_year">
 					<option>Expected graduation</option>
 					<option value="2013">2013</option>
-					<option value="2014">2014</option>
+					<option value="2014" selected>2014</option>
 					<option value="2015">2015</option>
 					<option value="2016">2016</option>
 					<option value="2017">2017</option>
@@ -38,24 +38,24 @@
 		<fieldset step-number="2" class="unit one-of-two">
 			<h3>How can we contact you?</h3>
 			<span class="unit span-grid">
-				<input type="text" name="email" placeholder="School email (.edu)"/>
+				<input type="text" name="email" value="ps@starfleet.edu" placeholder="School email (.edu)"/>
 			</span>
 			<span class="unit span-grid">
-				<input type="text" name="phone" placeholder="Phone number"/>
+				<input type="text" name="phone" value="9998887777" placeholder="Phone number"/>
 			</span>
 		</fieldset>
 		<fieldset step-number="3" class="unit one-of-two">
 			<h3>Where can we find your work?</h3>
 			<span class="unit span-grid">
-				<input type="text" name="github_url" placeholder="Github URL"/>
+				<input type="text" name="github_url" value="www.github.com/9bits" placeholder="Github URL"/>
 			</span>
 			<span class="unit span-grid">
-				<input type="text" name="linkedin_url" placeholder="LinkedIn URL"/>
+				<input type="text" name="linkedin_url" value="www.linkedin.com/9bits" placeholder="LinkedIn URL"/>
 			</span>
 		</fieldset>
 		<fieldset step-number="4" class="unit one-of-two">
 			<h3>Will you require travel reimbursement?</h3>
-			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="true" />
+			<span class="unit one-of-two"><input type="radio"  name="reimbursement_needed" value="true" checked />
 			Yes</span>
 			<span class="unit one-of-two"><input type="radio" name="reimbursement_needed" value="false" />
 			No</span> 

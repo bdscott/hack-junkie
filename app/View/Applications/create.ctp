@@ -129,6 +129,32 @@
 				<input type="text" name="zip" placeholder="Zip"/>
 			</span>-->
 		</fieldset>
+		
+		<?php if($competition['Item'] != null){ ?>
+		<div id="custom-fields" class="unit span-grid">
+			<?php 	foreach($competition['Item'] as $index=>$item){
+				
+						if($item['type'] == 'textarea'){
+							echo '<h3>' . $item['text'] . '</h3>';
+							echo '<textarea name="custom_field_' . $index . '" class="unit span-grid" style="margin-left: 0; height: 150px;"></textarea>';
+						} elseif($item['type'] == 'text'){ ?>
+							<span class="unit span-grid">
+								<h3><?php echo $item['text']; ?></h3>
+						    	<input type="text" name="custom_field_<?php echo $index; ?>"/>
+							</span>	
+				<?php	} elseif($item['type'] == 'dropdown'){ ?>
+							<h3><?php echo $item['text']; ?></h3>
+							<select name="custom_field_<?php echo $index; ?>">
+								<?php foreach(json_decode($item['options']) as $value=>$title){ ?>
+								<option value="<?php echo $value; ?>"><?php echo $title; ?></option>
+								<?php } ?>
+							</select>
+				<?php	}
+					
+					}
+				?>
+		</div>
+		<?php } ?>
 		<input type="submit" value="Apply for MHacks III"/>
   	</form>
 

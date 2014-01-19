@@ -1,8 +1,11 @@
 <?php
 
-App::uses('AppController', 'Controller');
+App::uses('AppController', 'Controller', 'Competition');
 
 class ApplicationsController extends AppController {
+	
+	public $uses = array('Competition');
+	
 	function index() {
 		if($this->Session->read('hackerid') == null){
 			$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
@@ -12,13 +15,13 @@ class ApplicationsController extends AppController {
 		}
 	}
 
-	function create() {
+	function create($competition_id) {
 		if ($this->data) {
 			$this -> Application -> set($this -> request -> data);
 			if ($this -> Application -> validates()) {
 				// it validated logic
 				$newApplication = $this->data;
-				$newApplication['Application']['competition_id'] = 1;
+				$newApplication['Application']['competition_id'] = $competition_id;
 				$newApplication['Application']['status'] = 'In review';
 				$this->Application->save($newApplication);
 				$application = $this -> Application -> find('first', array('conditions' => array('email' => $this -> data['email']), 'order' => array('Application.id' => 'DESC')));
@@ -27,8 +30,9 @@ class ApplicationsController extends AppController {
 			} else {
 				// didn't validate logic
 				$this->set('errors', $this->Application->validationErrors);
-				$this->Session->setFlash('Hallo');
 			}
+		} else {
+			$this->set('competition', $this->Competition->findById($competition_id));
 		}
 	}
 

@@ -4,13 +4,18 @@ App::uses('AppController', 'Controller', 'Competition');
 
 class ApplicationsController extends AppController {
 	
-	public $uses = array('Competition');
+	public $uses = array('Competition', 'Application');
 	
 	function index() {
 		if($this->Session->read('hackerid') == null){
 			$this->redirect(array('controller' => 'hackers', 'action' => 'login'));
 		} else {
 			$applications = $this->Application->findAllByEmail($this->Session->read('hackerUsername'));
+			if(count($applications) == 0){
+				$competition = $this->Competition->findByHacker_id($this->Session->read('hackerid'));
+				$applications = $this->Application->findAllByCompetition_id($competition['Competition']['id']);
+				$this->set('is_organizer', true);
+			}
 			$this->set('applications', $applications);
 		}
 	}
